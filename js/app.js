@@ -52,13 +52,6 @@ require([
     },
   });
 
-  // const mapView = new MapView({
-  //   map: map,
-  //   center: [-103.76, 45], // Longitude, latitude
-  //   zoom: 4, // Zoom level
-  //   container: 'viewDiv', // Div element
-  // });
-
   const featurLayer = new FeatureLayer({
     // URL to the service
     // 美國黃點
@@ -95,20 +88,4 @@ require([
     type: 'simple', // autocasts as new SimpleRenderer()
     symbol: symbol,
   };
-
-  // let tileLayer = new TileLayer({
-  //   url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Terrain_Base/MapServer',
-  // });
-  // map.add(tileLayer);
-
-  // Swipe 目前不支援 SceneView (3D 場景)
-  // 另外不支援在 leaderLayers 和 trailingLayers 中的 GroupLayer
-  // let swipe = new Swipe({
-  //   view: mapView,
-  //   leadingLayers: [layer1],
-  //   trailingLayers: [geojsonLayer],
-  //   direction: 'horizontal', // swipe widget will move from top to bottom of view
-  //   position: 50, // position set to middle of the view (50%)
-  // });
-  // view.ui.add(swipe);
 });
